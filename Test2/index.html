@@ -21,7 +21,7 @@
         scale="60 60 60"
         position="0,-10,-5"
         animation="property: object3D.position.y; to: 10; dir: alternate; dur: 1000; loop: true"
-        gps-new-entity-place="latitude: 34.1917560837694; longitude: -118.3457310889655;"
+        gps-new-entity-place="latitude: 34.191756; longitude: -118.345731;"
       ></a-text>
       <a-text
         value="Big Dome"
@@ -30,7 +30,7 @@
         position="0,25,-5"
         gps-new-entity-place="latitude: 34.192902; longitude: -118.348285;"
       ></a-text>
-        <a-camera gps-new-camera rotation-reader> </a-camera>
+        <a-camera gps-new-camera="gpsMinDistance: 5" rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
