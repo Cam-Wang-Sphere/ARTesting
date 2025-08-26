@@ -2,10 +2,14 @@ window.onload = () => {
     renderFighters(6);
 };
 
+let count = 0
+
 function renderFighters(numFighters)    {
     let baseName = 'Rot';
 
     for (let index = 0; index < numFighters; index++) {
+        console.log(count.toString());
+        count++;
         let realIndex = (index % 4) + 1;
         let fullName = baseName + realIndex.toString();
 
