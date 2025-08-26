@@ -20,5 +20,6 @@ function renderFighters(numFighters)    {
         });
 
         Anchor.appendChild(Model);
+        console.log("Addeda fighter to scene");
     }
 };
