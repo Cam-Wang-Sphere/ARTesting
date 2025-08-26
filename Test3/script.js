@@ -9,6 +9,8 @@ function renderFighters(numFighters)    {
         let realIndex = index % 4;
         let fullName = baseName + realIndex.toString();
 
+        console.log("Looking for entity with name: " + fullName);
+        
         let Anchor = document.querySelector("a-entity[name='" + fullName + "']");
 
         let Model = document.createElement('a-entity');
