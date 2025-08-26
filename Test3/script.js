@@ -2,13 +2,13 @@ window.onload = () => {
     renderFighters(6);
 };
 
-let count = 0
+var count = 0
 
 function renderFighters(numFighters)    {
     let baseName = 'Rot';
 
     for (let index = 0; index < numFighters; index++) {
-        let realIndex = (index % 4) + 1;
+        let realIndex = (count % 4) + 1;
         let fullName = baseName + realIndex.toString();
 
         console.log("Looking for entity with name: " + fullName);
