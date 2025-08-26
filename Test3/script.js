@@ -16,6 +16,7 @@ function spawnNewFighter()
 
     let randomDistance = Math.floor(Math.random() * (25 - 10 + 1)) + 10;
     let positionString = randomDistance.toString() + " 0 0";
+    console.log(positionString);
 
     let Anchor = document.querySelector("a-entity[name='" + fullName + "']");
 
