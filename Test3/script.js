@@ -14,8 +14,9 @@ function spawnNewFighter()
     let realIndex = (count % 4) + 1;
     let fullName = baseName + realIndex.toString();
 
-    let randomDistance = Math.floor(Math.random() * (25 - 10 + 1)) + 10;
-    let positionString = randomDistance.toString() + " 0 0";
+    let randomXDistance = Math.floor(Math.random() * (35 - 5 + 1)) + 5;
+    let randomYDistance = Math.floor(Math.random() * (10 - 5 + 1)) + 5;
+    let positionString = randomXDistance.toString() + " " + randomYDistance.toString() + " 0";
     console.log(positionString);
 
     let Anchor = document.querySelector("a-entity[name='" + fullName + "']");
