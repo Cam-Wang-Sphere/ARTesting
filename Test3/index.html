@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoAR.js demo</title>
+
+    <!-- A-Frame itself -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    <!-- Pure three.js code that the A-Frame components use for location-based AR -->
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
+
+    <!-- AR.js A-Frame components -->
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
+  </head>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+    >
+    <a-camera gps-new-camera="gpsMinDistance: 5" rotation-reader> </a-camera>
+    <a-entity 
+        gps-new-entity-place="latitude: 34.192902; longitude: -118.348285;"
+        name="Anchor"
+    >
+        <a-entity
+            text="value: LEGO; color: #94091e; width: 5; anchor: align"
+            position="0, 165, -10"
+            scale="20 20 20"
+            look-at="[gps-new-camera]"
+            animation="property: object3D.rotation.y; from: 0; to: 360; dur: 6000; loop: true"
+        >
+        </a-entity>
+        <a-entity         
+            position="0 120 -20"
+            animation="property: object3D.rotation.y; from: 0; to: 360; dur: 3000; loop: true"
+            name="Rot1"
+        >
+        </a-entity>
+        <a-entity         
+            position="0 135 -20"
+            animation="property: object3D.rotation.y; from: 0; to: 360; dur: 2300; loop: true"
+            name="Rot2"
+        >
+        </a-entity>
+        <a-entity         
+            position="0 142 -20"
+            animation="property: object3D.rotation.y; from: 360; to: 0; dur: 1700; loop: true"
+            name="Rot3"
+        >
+        </a-entity>
+        <a-entity         
+            position="0 150 -20"
+            animation="property: object3D.rotation.y; from: 360; to: 0; dur: 4000; loop: true"
+            animation__z="property: object3D.rotation.z; from: 0; to: 15; dur 2000; dir: alternate; loop: true"
+            name="Rot4"
+        >
+        </a-entity>
+    </a-entity>
+
+	</a-scene>
+</body>
+</html>
